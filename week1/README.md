@@ -58,4 +58,35 @@ Going through the traverse, if you encounter a neighbor that is already in on_pa
 3. **재귀를 활용한 DFS에서 가장 최근의 노드로 돌아가는 백트래킹 동작이 어떤 방식으로 동작하는지**  
    하나의 예를 들어 설명해주세요.
 
+**What is Backtracking**
+1) Going deep into a branch of a graph/tree
+2) Realizing there is nowhere left to go(= finish processing all neighbors)
+3) Returning to the previous node to explore the next unvisited neighbor
 
+Like I have mentioned in Q1, with recursive DFS, the backtracking happens automatically with the **call stack**.
+
+So I will furthur explain how the call stack helps us remember where to return to(=previous node).
+
+With the example graph as 
+
+```python
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': [],
+    'D': []
+}
+```
+
+**Call Stacks**
+```text
+Call Stack (from bottom → top):
+dfs('A')
+ └── dfs('B')
+      └── dfs('D')
+```
+Each level will remember where it left off in the loop,
+so here, when dfs('D') is over, it will go to dfs('B'), then to dfs('A')
+
+And thus, we have witnessed:
+**Backtracking** - The act of returning to the previous function call.
