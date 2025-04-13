@@ -41,7 +41,7 @@ DFS Traversal : A -> B -> D -> C -> E
 
 **Use Case Comparison**
 
-[BFS]
+**[BFS]**
 
 When to use?
 - shortest path(minimum number of edges) in unweighted graph
@@ -53,7 +53,7 @@ Sample use case
 - Minimum number of moves
 - Finding connected components(Socaial Networking graphs)
 
-[DFS]
+**[DFS]**
 
 When to use?
 - graph/tree is deep
@@ -72,7 +72,7 @@ Sample use case
 
 Before going on to answering the question, I would like to touch on the background of the concept.
 
-[**BFS 알고리즘의 시간 복잡도는 O(V+E)**]
+**[BFS 알고리즘의 시간 복잡도는 O(V+E)]**
 
 V : number of vertices(nodes)
 
@@ -88,7 +88,7 @@ Thus we get,
 
 which sums up to : O(V+E)
 
-[Dense graph / Sparse graph]
+**[Dense graph / Sparse graph]**
 
 Dense graph : Nearly fully connected `(E ≈ V²)`
  
