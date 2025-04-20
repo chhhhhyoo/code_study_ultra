@@ -53,6 +53,42 @@ Some examples are :
 - Maze
 - Sudoku
 
+### 3. 백트래킹 알고리즘의 시간 복잡도는 일반적으로 어떻게 표현되며, 실제 수행 시간에 가장 큰 영향을 미치는 요소는 무엇인가요? 가지치기(Pruning) 기법이 백트래킹의 효율성을 어떻게 개선하는지 실제 문제 예시를 들어 설명해주세요.
+
+Time Complexity of Backtracking :
+<div align="center">
+$O(b^d)$
+</div>
+
+- b : branching factor(# of choices available)
+- d : depth of the search tree
+
+Factors affecting Actual Running Time : <br>
+Two main factors :
+- Branching factor (b):
+- Depth (d)
+
+Reducing either *b* or *d* can improve performance, but **reducing the branching factor** typically has a much larger impact because it shrinks the search space exponentially.
+
+How pruning improves Efficiency :<br>
+Pruning improves backtracking by :
+- Detecting invalid path early
+- Cutting off unnecessary branches
+- **Reducing** the effective **branching factor**
+
+Even though the theoretical worst-case remains exponential, effective pruning can significantly reduce the number of nodes actually explored.
+
+Examples of pruning in real problems:
+
+- Maze Solving:
+    - Abandon paths that hit a wall or revisit the same cell.
+
+- Sudoku Solving:
+    - Stop exploring further when a number placement violates Sudoku rules.
+
+
+
+
 
 
 
