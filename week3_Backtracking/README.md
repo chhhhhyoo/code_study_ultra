@@ -38,6 +38,21 @@ Recursion gives you a **natural "memory"** of where you came from, and lets you 
 
 ### 2. 백트래킹과 완전 탐색(Brute-force search)의 차이점은 무엇이며, 백트래킹이 완전 탐색에 비해 효율적인 이유는 무엇 인가요? 백트래킹이 특히 유용한 문제 유형의 예시를 들어 설명해주세요.
 
+**Brute-force search** tries all possibilities exhaustively without early stopping, while **backtracking** selectively abandons paths that are already known to be invalid.
+
+**Why is backtracking more efficient?**<br>
+Brute-force explores all of them, even doomed paths. <br>
+In contrast, backtracking reduces the number of explored nodes by detecting failures early and pruning unnecessary branches.
+
+**When is Backtracking especially useful?** <br>
+Characteristics of Backtrack *effective* problems are:
+- Partial solutions can be validated easily
+- Early detection of invalid paths is possible
+
+Some examples are :
+- Maze
+- Sudoku
+
 
 
 
